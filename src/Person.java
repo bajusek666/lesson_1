@@ -15,4 +15,8 @@ public class Person {
     public String getSecondName() {
         return secondName;
     }
+
+    public String toString(){
+        return name + " " + secondName;
+    }
 }
