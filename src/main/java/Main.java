@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Person slawek = new Person("Sławek","Bajus");
@@ -6,11 +8,21 @@ public class Main {
         Person sebastian = new Person("Sebastian", "Bajus");
         Person kamil = new Person("Kamil","Bajus");
 
-        System.out.println(slawek.toString());
-        System.out.println(dorota.toString());
-        System.out.println(angelika.toString());
-        System.out.println(sebastian.toString());
-        System.out.println(kamil.toString());
+        ArrayList<Person> people = new ArrayList<>();
+
+        people.add(slawek);
+        people.add(dorota);
+        people.add(angelika);
+        people.add(sebastian);
+        people.add(kamil);
+
+        for (Person person: people) {
+            System.out.println(person.getName() + " " + person.getSecondName());
+        }
+
+
+
+
 
     }
 }
