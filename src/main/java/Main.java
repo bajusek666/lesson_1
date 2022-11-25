@@ -2,24 +2,24 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Person slawek = new Person("Sławek","Bajus");
-        Person dorota = new Person("Dorota","Bajus");
-        Person angelika = new Person("Angelika","Bajus");
-        Person sebastian = new Person("Sebastian", "Bajus");
-        Person kamil = new Person("Kamil","Bajus");
+        Person slawek = new Person("Sławek", "Bajus", 'm');
+        Person dorota = new Person("Dorota", "Bajus", 'f');
+        Person angelika = new Person("Angelika", "Bajus", 'f');
+        Person sebastian = new Person("Sebastian", "Bajus", 'm');
+        Person kamil = new Person("Kamil", "Bajus", 'm');
 
-        ArrayList<Person> people = new ArrayList<>();
+        ListOfPeople bajusFamily = new ListOfPeople();
 
-        people.add(slawek);
-        people.add(dorota);
-        people.add(angelika);
-        people.add(sebastian);
-        people.add(kamil);
+        bajusFamily.addPerson(slawek);
+        bajusFamily.addPerson(dorota);
+        bajusFamily.addPerson(angelika);
+        bajusFamily.addPerson(sebastian);
+        bajusFamily.addPerson(kamil);
 
-        for (Person person: people) {
-            System.out.println(person.getName() + " " + person.getSecondName());
-        }
+        bajusFamily.print();
 
+        System.out.println("Males: " + bajusFamily.howManyMales());
+        System.out.println("Females: " + bajusFamily.howManyFemales());
 
 
 

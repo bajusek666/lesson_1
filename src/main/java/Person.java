@@ -3,9 +3,12 @@ public class Person {
     private String name;
     private String secondName;
 
-    public Person(String name, String secondName) {
+    private char gender;
+
+    public Person(String name, String secondName, char gender) {
         this.name = name;
         this.secondName = secondName;
+        this.gender = gender;
     }
 
     public String getName(){
@@ -19,4 +22,9 @@ public class Person {
     public String toString(){
         return name + " " + secondName;
     }
+
+    public char getGender(){
+        return gender;
+    }
+
 }
