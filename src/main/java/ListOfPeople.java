@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class ListOfPeople implements Lista {
+public class ListOfPeople implements Behaviours {
     private ArrayList<Person> list;
 
     public ListOfPeople() {
@@ -11,6 +11,7 @@ public class ListOfPeople implements Lista {
         list.add(person);
     }
 
+    @Override
     public int malesCount() {
         int counter = 0;
 
@@ -21,7 +22,7 @@ public class ListOfPeople implements Lista {
         }
         return counter;
     }
-
+    @Override
     public int femalesCount() {
         int counter = 0;
 
@@ -32,13 +33,13 @@ public class ListOfPeople implements Lista {
         }
         return counter;
     }
-
+    @Override
     public void print() {
         for (Person person : list) {
             System.out.println(person.getFirstName() + " " + person.getLastName() + " " +person.getGender().getValue());
         }
     }
-
+    @Override
     public void printLongestFirstName() {
         String longest = "";
         for (Person person : list) {
@@ -48,7 +49,7 @@ public class ListOfPeople implements Lista {
         }
         System.out.println("The longest firstname is: " + longest);
     }
-
+    @Override
     public void printLongestLastName(){
         String longest = "";
         for (Person person : list) {
