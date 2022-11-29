@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class ListOfPeople {
+public class ListOfPeople implements Lista {
     private ArrayList<Person> list;
 
     public ListOfPeople() {
@@ -11,33 +11,51 @@ public class ListOfPeople {
         list.add(person);
     }
 
-    public int howManyMales() {
+    public int malesCount() {
         int counter = 0;
 
         for (Person person : list) {
-            if (person.getGender() == 'm') {
+            if (person.getGender().equals(Gender.MALE)) {
                 counter++;
             }
         }
         return counter;
-    }  // returns how many Males are on the list
+    }
 
-    public int howManyFemales() {
+    public int femalesCount() {
         int counter = 0;
 
         for (Person person : list) {
-            if (person.getGender() == 'f') {
+            if (person.getGender().equals(Gender.FEMALE)) {
                 counter++;
             }
         }
         return counter;
-    } // returns how many Females are on the list
+    }
 
     public void print() {
         for (Person person : list) {
-            System.out.println(person.getName() + " " + person.getSecondName());
+            System.out.println(person.getFirstName() + " " + person.getLastName() + " " +person.getGender().getValue());
         }
-    } // prints out names and second names of people on the list
+    }
 
+    public void printLongestFirstName() {
+        String longest = "";
+        for (Person person : list) {
+            if (person.getFirstName().length() > longest.length()) {
+                longest = person.getFirstName();
+            }
+        }
+        System.out.println("The longest firstname is: " + longest);
+    }
 
+    public void printLongestLastName(){
+        String longest = "";
+        for (Person person : list) {
+            if (person.getLastName().length() > longest.length()) {
+                longest = person.getLastName();
+            }
+        }
+        System.out.println("The longest lastname is: " + longest);
+    }
 }

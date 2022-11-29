@@ -1,29 +1,29 @@
 public class Person {
 
-    private String name;
-    private String secondName;
+    private String firstName;
+    private String lastName;
 
-    private char gender;
+    private Gender gender;
 
-    public Person(String name, String secondName, char gender) {
-        this.name = name;
-        this.secondName = secondName;
+    public Person(String name, String lastName, Gender gender) {
+        this.firstName = name;
+        this.lastName = lastName;
         this.gender = gender;
     }
 
-    public String getName(){
-        return name;
+    public String getFirstName(){
+        return firstName;
     }
 
-    public String getSecondName() {
-        return secondName;
+    public String getLastName() {
+        return lastName;
     }
 
     public String toString(){
-        return name + " " + secondName;
+        return firstName + " " + lastName;
     }
 
-    public char getGender(){
+    public Gender getGender(){
         return gender;
     }
 

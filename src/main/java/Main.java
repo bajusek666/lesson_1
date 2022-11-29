@@ -1,12 +1,10 @@
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
-        Person slawek = new Person("Sławek", "Bajus", 'm');
-        Person dorota = new Person("Dorota", "Bajus", 'f');
-        Person angelika = new Person("Angelika", "Bajus", 'f');
-        Person sebastian = new Person("Sebastian", "Bajus", 'm');
-        Person kamil = new Person("Kamil", "Bajus", 'm');
+        Person slawek = new Person("Sławek", "Bajus", Gender.MALE);
+        Person dorota = new Person("Dorota", "Bajus", Gender.FEMALE);
+        Person angelika = new Person("Angelika", "Bajus", Gender.FEMALE);
+        Person sebastian = new Person("Sebastian", "Bajus", Gender.MALE);
+        Person kamil = new Person("Kamil", "Bajus", Gender.MALE);
 
         ListOfPeople bajusFamily = new ListOfPeople();
 
@@ -18,8 +16,13 @@ public class Main {
 
         bajusFamily.print();
 
-        System.out.println("Males: " + bajusFamily.howManyMales());
-        System.out.println("Females: " + bajusFamily.howManyFemales());
+        System.out.println("Males: " + bajusFamily.malesCount());
+        System.out.println("Females: " + bajusFamily.femalesCount());
+
+        bajusFamily.printLongestFirstName();
+        bajusFamily.printLongestLastName();
+
+
 
 
 
