@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class ListOfPeople implements Behaviours {
+public class ListOfPeople {
     private ArrayList<Person> list;
 
     public ListOfPeople() {
@@ -11,7 +11,7 @@ public class ListOfPeople implements Behaviours {
         list.add(person);
     }
 
-    @Override
+
     public int malesCount() {
         int counter = 0;
 
@@ -22,7 +22,7 @@ public class ListOfPeople implements Behaviours {
         }
         return counter;
     }
-    @Override
+
     public int femalesCount() {
         int counter = 0;
 
@@ -33,13 +33,13 @@ public class ListOfPeople implements Behaviours {
         }
         return counter;
     }
-    @Override
+
     public void print() {
         for (Person person : list) {
-            System.out.println(person.getFirstName() + " " + person.getLastName() + " " +person.getGender().getValue());
+            System.out.println(person.getFirstName() + " " + person.getLastName() + " " + person.getGender().getValue());
         }
     }
-    @Override
+
     public void printLongestFirstName() {
         String longest = "";
         for (Person person : list) {
@@ -49,8 +49,8 @@ public class ListOfPeople implements Behaviours {
         }
         System.out.println("The longest firstname is: " + longest);
     }
-    @Override
-    public void printLongestLastName(){
+
+    public void printLongestLastName() {
         String longest = "";
         for (Person person : list) {
             if (person.getLastName().length() > longest.length()) {
@@ -58,5 +58,22 @@ public class ListOfPeople implements Behaviours {
             }
         }
         System.out.println("The longest lastname is: " + longest);
+    }
+
+    public void printOldestPerson(){
+        int oldest = Integer.MIN_VALUE;
+        String firstNameOfTheOldestPerson = null;
+        String lastNameOfTheOldestPerson = null;
+
+        for (Person person : list) {
+            if(person.getAge()>oldest){
+                oldest = person.getAge();
+                firstNameOfTheOldestPerson = person.getFirstName();
+                lastNameOfTheOldestPerson = person.getLastName();
+            }
+        }
+
+        System.out.println("The oldest person on the list is " + firstNameOfTheOldestPerson + " " + lastNameOfTheOldestPerson + " age: " + oldest);
+
     }
 }

@@ -2,13 +2,17 @@ public class Person {
 
     private String firstName;
     private String lastName;
-
     private Gender gender;
+    private int wiek;
 
-    public Person(String name, String lastName, Gender gender) {
+    private String dateOfBirth;
+
+    public Person(String name, String lastName, Gender gender, int wiek, String dateOfBirth) {
         this.firstName = name;
         this.lastName = lastName;
         this.gender = gender;
+        this.wiek = wiek;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getFirstName(){
@@ -19,6 +23,10 @@ public class Person {
         return lastName;
     }
 
+    public int getAge(){
+        return wiek;
+    }
+
     public String toString(){
         return firstName + " " + lastName;
     }
@@ -26,5 +34,7 @@ public class Person {
     public Gender getGender(){
         return gender;
     }
+
+
 
 }
