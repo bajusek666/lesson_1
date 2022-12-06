@@ -11,7 +11,6 @@ public class ListOfPeople {
         list.add(person);
     }
 
-
     public int malesCount() {
         int counter = 0;
 
@@ -36,7 +35,7 @@ public class ListOfPeople {
 
     public void print() {
         for (Person person : list) {
-            System.out.println(person.getFirstName() + " " + person.getLastName() + " " + person.getGender().getValue());
+            System.out.println(person.getFirstName() + " " + person.getLastName() + " " + person.getGender().getValue() + ", Age: " +  person.getAge());
         }
     }
 

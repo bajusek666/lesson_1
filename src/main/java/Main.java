@@ -1,10 +1,13 @@
+import java.time.LocalDate;
+import java.util.Locale;
+
 public class Main {
     public static void main(String[] args) {
-        Person slawek = new Person("Sławek", "Bajus", Gender.MALE,50, "09.12.1971");
-        Person dorota = new Person("Dorota", "Bajus", Gender.FEMALE,48,"14.02.1973");
-        Person angelika = new Person("Angelika", "Bajus", Gender.FEMALE,27,"23.12.1995");
-        Person sebastian = new Person("Sebastian", "Bajus", Gender.MALE,24,"11.07.1998");
-        Person kamil = new Person("Kamil", "Bajus", Gender.MALE,20,"13.08.2002");
+        Person slawek = new Person("Sławek", "Bajus", Gender.MALE, LocalDate.of(1971,12,9));
+        Person dorota = new Person("Dorota", "Bajus", Gender.FEMALE,LocalDate.of(1973,2,14));
+        Person angelika = new Person("Angelika", "Bajus", Gender.FEMALE,LocalDate.of(1995,12,23));
+        Person sebastian = new Person("Sebastian", "Bajus", Gender.MALE,LocalDate.of(1998,7,11));
+        Person kamil = new Person("Kamil", "Bajus", Gender.MALE,LocalDate.of(2002,8,13));
 
         ListOfPeople bajusFamily = new ListOfPeople();
 
@@ -22,7 +25,14 @@ public class Main {
         bajusFamily.printLongestFirstName();
         bajusFamily.printLongestLastName();
 
+
         bajusFamily.printOldestPerson();
+
+
+
+
+
+
 
 
 

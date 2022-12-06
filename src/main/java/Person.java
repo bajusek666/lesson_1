@@ -1,18 +1,19 @@
+import java.time.LocalDate;
+
 public class Person {
 
     private String firstName;
     private String lastName;
     private Gender gender;
-    private int wiek;
 
-    private String dateOfBirth;
+    private LocalDate birthDate;
 
-    public Person(String name, String lastName, Gender gender, int wiek, String dateOfBirth) {
+
+    public Person(String name, String lastName, Gender gender, LocalDate birthDate) {
         this.firstName = name;
         this.lastName = lastName;
         this.gender = gender;
-        this.wiek = wiek;
-        this.dateOfBirth = dateOfBirth;
+        this.birthDate = birthDate;
     }
 
     public String getFirstName(){
@@ -24,7 +25,28 @@ public class Person {
     }
 
     public int getAge(){
-        return wiek;
+
+        int years = 0;
+
+        years = LocalDate.now().getYear() - birthDate.getYear();
+        if(years == 0){
+            return 0;
+        }
+
+        if(LocalDate.now().getMonthValue() < birthDate.getMonthValue()){
+            return years -1;
+        }
+
+        if(LocalDate.now().getMonthValue() == birthDate.getMonthValue()){
+            if(LocalDate.now().getDayOfMonth() < birthDate.getDayOfMonth()){
+                return years -1;
+            }
+            return years;
+        }
+
+        return years;
+
+
     }
 
     public String toString(){
