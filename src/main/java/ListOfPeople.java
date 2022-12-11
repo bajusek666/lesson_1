@@ -35,7 +35,7 @@ public class ListOfPeople {
 
     public void print() {
         for (Person person : list) {
-            System.out.println(person.getFirstName() + " " + person.getLastName() + " " + person.getGender().getValue() + ", Age: " +  person.getAge());
+            System.out.println(person.getFirstName() + " " + person.getLastName() + ", Age: " +  person.getAge());
         }
     }
 

@@ -16,6 +16,12 @@ public class Person {
         this.birthDate = birthDate;
     }
 
+    public Person(String name, String lastName, LocalDate birthDate){
+        this.firstName = name;
+        this.lastName = lastName;
+        this.birthDate = birthDate;
+    }
+
     public String getFirstName(){
         return firstName;
     }
