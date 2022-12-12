@@ -22,7 +22,7 @@ public class Person {
         this.birthDate = birthDate;
     }
 
-    public String getFirstName(){
+     public String getFirstName(){
         return firstName;
     }
 

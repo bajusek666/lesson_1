@@ -3,8 +3,8 @@
 public class Main {
     public static void main(String[] args) {
 
-        ReadingFromAFile reading = new ReadingFromAFile();
-        ListOfPeople bajusFamily = reading.readFromAFile();
+        FileReader reading = new FileReader();
+        ListOfPeople bajusFamily = reading.read();
 
         bajusFamily.print();
 

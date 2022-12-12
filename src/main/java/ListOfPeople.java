@@ -11,6 +11,10 @@ public class ListOfPeople {
         list.add(person);
     }
 
+    public int getSize(){
+        return list.size();
+    }
+
     public int malesCount() {
         int counter = 0;
 
