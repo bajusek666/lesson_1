@@ -16,13 +16,13 @@ public class Person {
         this.birthDate = birthDate;
     }
 
-    public Person(String name, String lastName, LocalDate birthDate){
+    public Person(String name, String lastName, LocalDate birthDate) {
         this.firstName = name;
         this.lastName = lastName;
         this.birthDate = birthDate;
     }
 
-     public String getFirstName(){
+    public String getFirstName() {
         return firstName;
     }
 
@@ -30,22 +30,22 @@ public class Person {
         return lastName;
     }
 
-    public int getAge(){
+    public int getAge() {
 
         int years = 0;
 
         years = LocalDate.now().getYear() - birthDate.getYear();
-        if(years == 0){
+        if (years == 0) {
             return 0;
         }
 
-        if(LocalDate.now().getMonthValue() < birthDate.getMonthValue()){
-            return years -1;
+        if (LocalDate.now().getMonthValue() < birthDate.getMonthValue()) {
+            return years - 1;
         }
 
-        if(LocalDate.now().getMonthValue() == birthDate.getMonthValue()){
-            if(LocalDate.now().getDayOfMonth() < birthDate.getDayOfMonth()){
-                return years -1;
+        if (LocalDate.now().getMonthValue() == birthDate.getMonthValue()) {
+            if (LocalDate.now().getDayOfMonth() < birthDate.getDayOfMonth()) {
+                return years - 1;
             }
             return years;
         }
@@ -55,14 +55,13 @@ public class Person {
 
     }
 
-    public String toString(){
+    public String toString() {
         return firstName + " " + lastName;
     }
 
-    public Gender getGender(){
+    public Gender getGender() {
         return gender;
     }
-
 
 
 }

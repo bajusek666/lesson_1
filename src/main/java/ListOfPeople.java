@@ -11,7 +11,7 @@ public class ListOfPeople {
         list.add(person);
     }
 
-    public int getSize(){
+    public int getSize() {
         return list.size();
     }
 
@@ -39,37 +39,37 @@ public class ListOfPeople {
 
     public void print() {
         for (Person person : list) {
-            System.out.println(person.getFirstName() + " " + person.getLastName() + ", Age: " +  person.getAge());
+            System.out.println(person.getFirstName() + " " + person.getLastName() + ", Age: " + person.getAge());
         }
     }
 
-    public void printLongestFirstName() {
+    public String printLongestFirstName() {
         String longest = "";
         for (Person person : list) {
             if (person.getFirstName().length() > longest.length()) {
                 longest = person.getFirstName();
             }
         }
-        System.out.println("The longest firstname is: " + longest);
+        return longest;
     }
 
-    public void printLongestLastName() {
+    public String printLongestLastName() {
         String longest = "";
         for (Person person : list) {
             if (person.getLastName().length() > longest.length()) {
                 longest = person.getLastName();
             }
         }
-        System.out.println("The longest lastname is: " + longest);
+        return longest;
     }
 
-    public void printOldestPerson(){
+    public void printOldestPerson() {
         int oldest = Integer.MIN_VALUE;
         String firstNameOfTheOldestPerson = null;
         String lastNameOfTheOldestPerson = null;
 
         for (Person person : list) {
-            if(person.getAge()>oldest){
+            if (person.getAge() > oldest) {
                 oldest = person.getAge();
                 firstNameOfTheOldestPerson = person.getFirstName();
                 lastNameOfTheOldestPerson = person.getLastName();
