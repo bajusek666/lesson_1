@@ -11,6 +11,10 @@ public class ListOfPeople {
         list.add(person);
     }
 
+    public Person getPerson(int index){
+        return list.get(index);
+    }
+
     public int getSize() {
         return list.size();
     }

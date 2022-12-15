@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        if (args != null) {
+        if (args == null) {
             System.err.println("Nie podano pliku!");
         } else {
             String filename = args[0];

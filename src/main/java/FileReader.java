@@ -9,12 +9,10 @@ public class FileReader {
 
     public ListOfPeople read(String filename) {
 
-        Scanner scanner = new Scanner(filename);
-        String file = scanner.nextLine();
 
         ListOfPeople people = new ListOfPeople();
 
-        try (Scanner s = new Scanner(Paths.get(file))) {
+        try (Scanner s = new Scanner(Paths.get(filename))) {
             while (s.hasNextLine()) {
                 String line = s.nextLine();
                 String[] personFields = line.split(PERSON_SPLITTER);

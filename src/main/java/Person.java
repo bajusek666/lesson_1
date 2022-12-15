@@ -30,6 +30,10 @@ public class Person {
         return lastName;
     }
 
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
     public int getAge() {
 
         int years = 0;
